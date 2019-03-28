@@ -1,0 +1,42 @@
+ul
+{
+	/*去表格样式*/
+	list-style: none;
+}
+
+a{
+/*去下划线*/	
+text-decoration: none;
+/*改变链接颜色*/
+color: black;
+}
+ul li
+{
+	width:110px;
+	height: 30px;
+	/*距离上边3px*/
+	margin-top: 3px;
+    font-size: 18px;
+    /*文本的对齐方式是居中*/
+    text-align: center;
+    /*行高*/
+   line-height: 40px;
+   /*圆角工具*/
+  border-radius: 3px;
+}
+/*伪类*/
+li:hover 
+{
+	background-color:#fa2f2f;
+	/*变手势*/
+	cursor: pointer;	
+}
+a:hover li
+{
+	color: white;
+}
+/*聚焦focus*/
+a:focus li
+{
+	background-color: orange;
+}

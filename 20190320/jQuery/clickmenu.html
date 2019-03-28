@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>鼠标点击出现菜单</title>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+		*
+		{
+			padding: 0px;
+			margin: 0px;
+		}
+		body
+		{
+			height: 100%;
+			width: 100%;
+			position: fixed;
+		}
+		#reddiv
+		{
+			height: 100%;
+			width: 100%;
+			background-color: red;
+		/*	opacity: 0.6;*/
+			transition: all 0.5s;
+		}
+		#bluediv
+		{
+			height: 100%;
+			width: 100%;
+			background-color: blue;
+			position: absolute;
+			top: 0px;
+			z-index: -1;
+		}
+		a
+		{
+			color: white;
+			text-decoration:none ;
+		}
+		ul li
+		{
+		    text-indent: 10px;
+		}
+		.move
+		{
+			transform: translate(100px);
+		}
+	</style>
+	</head>
+	<body>
+		<div id="reddiv">
+			<button id="btn1">点击</button>
+		</div>
+		<div id="bluediv">
+			<ul>
+				<li><a href="#">java</a></li>
+				<li><a href="#">java</a></li>
+				<li><a href="#">java</a></li>
+				<li><a href="#">java</a></li>
+				<li><a href="#">java</a></li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		$(function(){
+			$("#btn1").click(function(){
+				$("#reddiv").toggleClass("move");
+			})
+		})
+	</script>
+</html>
